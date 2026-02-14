@@ -1,0 +1,23 @@
+2026-02-14 23:16:09,101 - INFO - Document created for input.txt
+2026-02-14 23:16:09,120 - INFO - File loaded successfully
+2026-02-14 23:16:09,122 - INFO - Text cleaned
+2026-02-14 23:16:09,122 - INFO - Word count calculated: 15
+2026-02-14 23:16:35,838 - INFO - Document created for input.txt
+2026-02-14 23:16:35,840 - INFO - File loaded successfully
+2026-02-14 23:16:35,842 - INFO - Text cleaned
+2026-02-14 23:16:35,844 - INFO - Word count calculated: 15
+2026-02-14 23:17:36,419 - INFO - Document created for input.txt
+2026-02-14 23:17:36,420 - ERROR - File not found
+2026-02-14 23:17:36,420 - ERROR - Program crashed
+Traceback (most recent call last):
+  File "C:\Users\DELL\Documents\ai-foundations\run_document.py", line 9, in main
+    doc.load()
+  File "C:\Users\DELL\Documents\ai-foundations\document.py", line 20, in load
+    self.text = self.path.read_text(encoding="utf-8")
+  File "C:\Program Files\Python39\lib\pathlib.py", line 1255, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "C:\Program Files\Python39\lib\pathlib.py", line 1241, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "C:\Program Files\Python39\lib\pathlib.py", line 1109, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'input.txt'
