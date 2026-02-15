@@ -1,3 +1,4 @@
+import json
 import re
 import logging
 from pathlib import Path
@@ -44,3 +45,16 @@ class Document:
         count = len(words)
         logger.info(f"Word count calculated: {count}")
         return count
+    
+    def export_json(self, output_path: str) -> None:
+     data = {
+        "file": self.path.name,
+        "word_count": self.stats(),
+        "cleaned_text": self.text
+    }
+
+     with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4)
+
+     logger.info(f"JSON exported to {output_path}")
+

@@ -12,7 +12,9 @@ def main() -> None:
         total_words = doc.stats()
         print(f"Total words: {total_words}")
 
-    except Exception as e:
+        doc.export_json("cleaned.json")
+
+    except Exception:
         logger.exception("Program crashed")
 
 

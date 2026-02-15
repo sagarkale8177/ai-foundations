@@ -25,3 +25,9 @@ FileNotFoundError: [Errno 2] No such file or directory: 'input.txt'
 2026-02-15 10:58:51,369 - INFO - File loaded successfully
 2026-02-15 10:58:51,369 - INFO - Text cleaned with regex
 2026-02-15 10:58:51,369 - INFO - Word count calculated: 7
+2026-02-15 11:12:34,156 - INFO - Document created for input.txt
+2026-02-15 11:12:34,170 - INFO - File loaded successfully
+2026-02-15 11:12:34,170 - INFO - Text cleaned with regex
+2026-02-15 11:12:34,170 - INFO - Word count calculated: 7
+2026-02-15 11:12:34,170 - INFO - Word count calculated: 7
+2026-02-15 11:12:34,170 - INFO - JSON exported to cleaned.json
