@@ -1,3 +1,4 @@
+import re
 import logging
 from pathlib import Path
 
@@ -24,8 +25,19 @@ class Document:
             raise
 
     def clean(self) -> None:
-        self.text = self.text.strip().lower()
-        logger.info("Text cleaned")
+    # remove emails
+     self.text = re.sub(r"\S+@\S+", "", self.text)
+
+    # remove phone numbers (10 digit)
+     self.text = re.sub(r"\b\d{10}\b", "", self.text)
+
+    # remove extra spaces
+     self.text = re.sub(r"\s+", " ", self.text)
+
+     self.text = self.text.strip().lower()
+
+     logger.info("Text cleaned with regex")
+
 
     def stats(self) -> int:
         words = self.text.split()
